@@ -518,3 +518,10 @@ h1,h2,h3,.hero__catch,.lesson-card__lead,.page-hero__lead,.cta__ttl,.solve__pill
   body{padding-bottom:0}
   .hero__catch{font-size:19px}
 }
+
+/* map label (covers Google's place card, shows our name) */
+.map-label{position:absolute;top:10px;left:10px;z-index:2;background:#fff;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.18);padding:14px 16px 16px;width:min(300px,calc(100% - 20px));min-height:118px}
+.map-label__name{display:flex;align-items:center;gap:8px;font-family:var(--f-en);font-weight:600;font-size:18px;color:var(--primary);line-height:1.2}
+.map-label__logo{width:24px;height:24px;flex-shrink:0}
+.map-label__addr{font-size:12px;color:var(--sub);line-height:1.6;margin:6px 0 10px}
+.map-label .btn{padding:8px 16px;font-size:13px}
