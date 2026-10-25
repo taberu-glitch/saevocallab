@@ -51,9 +51,14 @@ SCHOOL = {
     'areaServed': ['練馬区'],
     # 月謝（サイト掲載の内容）
     'price': {'name': 'ボーカルレッスン 月謝（月2回・1回50分）', 'price': 12000},
-    # 受付時間。定休日がある場合は days から外してください。
-    'openingHours': [{'days': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-                      'opens': '10:00', 'closes': '21:00'}],
+    # 営業時間（日曜・祝日はお休み）。label は llms.txt 用の表記。
+    'openingHours': [
+        {'days': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], 'opens': '10:00', 'closes': '21:00',
+         'label': '月〜金 10:00〜21:00（最終受付20:00）'},
+        {'days': ['Saturday'], 'opens': '12:00', 'closes': '18:00',
+         'label': '土 12:00〜18:00（最終受付17:00）'},
+    ],
+    'closedLabel': '日曜・祝日',
 
     # ---- ここから下は確定したら入力（None / 空のままなら出力されません） ----
     # 電話番号は掲載しない方針のため、構造化データ・llms.txt に出力しません。
@@ -353,8 +358,10 @@ def write_llms(pages):
            f'- 所在地: 〒{s["postalCode"]} {s["addressRegion"]}{s["addressLocality"]}{s["streetAddress"]}',
            f'- 最寄り駅: {s["nearestStation"]}']
     if s.get('openingHours'):
-        h = s['openingHours'][0]
-        out.append(f'- 受付時間: {h["opens"]}〜{h["closes"]}')
+        hours = '、'.join(h['label'] for h in s['openingHours'])
+        if s.get('closedLabel'):
+            hours += f'。{s["closedLabel"]}はお休み'
+        out.append(f'- 営業時間: {hours}')
     if s.get('email'):
         out.append(f'- メール: {s["email"]}')
     out += ['- レッスン形式: マンツーマンの個人レッスン（1回50分、曜日・時間固定）']
