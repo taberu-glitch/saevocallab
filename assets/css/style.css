@@ -451,7 +451,7 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
   .sp-bar{display:block;position:fixed;left:0;right:0;bottom:0;z-index:60;background:#fff;box-shadow:0 -4px 20px rgba(0,0,0,.08);padding:8px 12px calc(10px + env(safe-area-inset-bottom));transition:transform .3s}
   .sp-bar.is-hidden{transform:translateY(110%)}
   .sp-bar__ttl{text-align:center;font-family:var(--f-head);font-weight:700;font-size:12px;color:var(--primary);line-height:1.4;margin-bottom:6px}
-  .sp-bar__btns{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+  .sp-bar__btns{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
   .sp-bar__btns a{display:flex;align-items:center;justify-content:center;gap:6px;height:42px;border-radius:999px;color:#fff;font-family:var(--f-head);font-weight:700;font-size:13px}
   .sp-bar__btns svg{width:16px;height:16px}
   .sp-bar .b-line{background:var(--green)}
@@ -530,3 +530,78 @@ h1,h2,h3,.hero__catch,.lesson-card__lead,.page-hero__lead,.cta__ttl,.solve__pill
 .hero__photo img{object-position:50% 35%}
 .instructor__photo,.teacher__ph{border-radius:var(--r);overflow:hidden}
 .instructor__photo img,.teacher__ph img{width:100%;height:100%;object-fit:cover;object-position:50% 25%}
+
+/* =========================================================
+   2026-10 SEO・アクセス強調（中村橋駅 徒歩1分）
+   ========================================================= */
+.ic-pin{width:1.05em;height:1.05em;flex-shrink:0}
+.brand__tag b{display:inline-block;background:var(--primary);color:#fff;border-radius:999px;padding:1px 9px;margin-right:6px;font-weight:700}
+
+/* hero: 駅バッジ */
+.station-badge{position:absolute;left:28px;bottom:28px;z-index:2;width:176px;height:176px;border-radius:50%;background:var(--primary);color:#fff;border:5px solid #fff;box-shadow:0 8px 24px rgba(235,80,78,.35);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-family:var(--f-head);font-weight:700;line-height:1.15;transform:rotate(-6deg)}
+.station-badge__line{font-size:12px;opacity:.92;letter-spacing:.04em}
+.station-badge__sta{font-size:22px;margin-top:4px}
+.station-badge__walk{font-size:18px;margin-top:2px}
+.station-badge__walk b{font-family:var(--f-en);font-weight:600;font-size:58px;line-height:1;margin:0 2px;vertical-align:-6px}
+
+/* intro: 見えるh1 */
+.intro{text-align:center}
+.intro__station{display:inline-flex;align-items:center;gap:8px;background:var(--tint);color:var(--primary);border-radius:999px;padding:8px 22px;font-family:var(--f-head);font-weight:700;font-size:16px;line-height:1.4}
+.intro__station b{font-size:22px}
+.intro__h1{font-family:var(--f-en);font-weight:600;font-size:56px;line-height:1.1;color:var(--primary);margin:20px 0 28px}
+.intro__h1-area{display:block;font-family:var(--f-head);font-weight:700;font-size:22px;color:var(--text);letter-spacing:.04em;margin-bottom:10px}
+.intro__h1-kana{display:block;font-family:var(--f-head);font-weight:700;font-size:15px;color:var(--accent-text);letter-spacing:.2em;margin-top:10px}
+.intro .intro__text{text-align:center}
+.intro__tags{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:28px}
+.intro__tags li{background:var(--tint2);color:var(--accent-text);border-radius:999px;padding:6px 18px;font-family:var(--f-head);font-weight:700;font-size:14px;line-height:1.5}
+
+/* 下層: 駅チップ・h1サブ */
+.station-chip{display:inline-flex;align-items:center;gap:6px;background:#fff;color:var(--primary);border:2px solid var(--primary);border-radius:999px;padding:5px 16px;font-family:var(--f-head);font-weight:700;font-size:14px;line-height:1.4;margin-bottom:16px}
+.station-chip b{font-size:17px}
+.page-hero__title-sub{display:block;font-size:17px;color:var(--accent-text);letter-spacing:.03em;margin-top:6px;line-height:1.5}
+
+/* アクセス: 徒歩1分を大きく */
+.access__station{display:flex;align-items:center;gap:16px;background:var(--tint);border-radius:16px;padding:16px 20px;margin-bottom:20px}
+.access__station-ic{width:52px;height:52px;border-radius:50%;background:var(--primary);color:#fff;display:grid;place-items:center;flex-shrink:0;font-size:24px}
+.access__station p{font-family:var(--f-head);font-weight:700;font-size:17px;line-height:1.4}
+.access__station-line{display:block;font-size:13px;color:var(--sub)}
+.access__station b{color:var(--primary);font-size:24px;margin-left:4px;white-space:nowrap}
+.access__station em{font-style:normal;font-family:var(--f-en);font-weight:600;font-size:48px;line-height:1;vertical-align:-4px;margin:0 2px}
+
+/* フッター: 所在地・Instagram */
+.footer__addr{font-style:normal;font-size:13px;line-height:1.8;margin-top:14px;opacity:.95}
+.sns a.sns__ig{width:auto;height:40px;padding:0 16px 0 12px;gap:8px;display:inline-flex;align-items:center;border-radius:999px;font-family:var(--f-en);font-weight:600;font-size:14px;letter-spacing:.04em}
+.sns a.sns__ig svg{width:20px;height:20px}
+.sns--center{justify-content:center;margin-top:24px}
+.drawer .sns a.sns__ig{background:var(--primary);color:#fff}
+
+@media (max-width:960px){
+  .station-badge{width:112px;height:112px;left:12px;bottom:12px;border-width:3px}
+  .station-badge__line{font-size:9px}
+  .station-badge__sta{font-size:15px;margin-top:2px}
+  .station-badge__walk{font-size:13px}
+  .station-badge__walk b{font-size:36px;vertical-align:-4px}
+  .intro__station{font-size:13px;padding:6px 16px}
+  .intro__station b{font-size:17px}
+  .intro__h1{font-size:38px;margin:16px 0 22px}
+  .intro__h1-area{font-size:17px}
+  .intro__h1-kana{font-size:12px}
+  .intro .intro__text{text-align:left}
+  .intro__tags{gap:8px;margin-top:22px}
+  .intro__tags li{font-size:12px;padding:5px 12px}
+  .station-chip{font-size:12px;padding:4px 12px;margin-bottom:12px}
+  .station-chip b{font-size:15px}
+  .page-hero__title-sub{font-size:14px}
+  .access__station{padding:14px 16px;gap:12px}
+  .access__station-ic{width:44px;height:44px;font-size:20px}
+  .access__station p{font-size:15px}
+  .access__station b{font-size:20px}
+  .access__station em{font-size:40px}
+}
+
+/* LINE QRコード */
+.qr.qr--img{width:auto;height:auto;border:0;display:flex;flex-direction:column;align-items:center;gap:8px;padding:0}
+.qr--img img{width:136px;height:136px;border-radius:12px;border:1px solid var(--line);background:#fff;padding:6px}
+.qr--img span{font-size:11px;line-height:1.5;color:var(--sub);text-align:center}
+.footer__cta .btn--line{border-color:#fff}
+@media (max-width:960px){.cta .qr.qr--img{display:none}}
