@@ -31,4 +31,4 @@ Allow: /
 User-agent: Applebot-Extended
 Allow: /
 
-Sitemap: https://saevocallab.jp/sitemap.xml
+Sitemap: https://saevocallab.co.jp/sitemap.xml

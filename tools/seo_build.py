@@ -34,7 +34,7 @@ from bs4 import BeautifulSoup
 # ============================================================
 
 # 公開するドメイン（末尾スラッシュなし）
-SITE_URL = 'https://saevocallab.jp'
+SITE_URL = 'https://saevocallab.co.jp'
 
 SCHOOL = {
     'name': 'SaeVocalLab',

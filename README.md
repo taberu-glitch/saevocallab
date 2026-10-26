@@ -52,5 +52,5 @@
   - Instagram のボタンは各ページのフッターとスマホメニューにあります（`class="sns__ig"` の href）
 - `tools/` フォルダと README.md はサーバーにアップロード不要
 - Google アナリティクス等の計測タグを各ページの `<head>` に追加
-- Google Search Console と Bing Webmaster Tools に登録し、sitemap.xml（https://saevocallab.jp/sitemap.xml）を送信
+- Google Search Console と Bing Webmaster Tools に登録し、sitemap.xml（https://saevocallab.co.jp/sitemap.xml）を送信
 - Googleビジネスプロフィールを「SaeVocalLab」で登録し、URLを `SCHOOL['sameAs']` に入れて再実行
