@@ -17,7 +17,8 @@
     }
   }
   window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
+  /* 初回は描画後に実行（読み込み直後の強制リフローを避ける） */
+  requestAnimationFrame(onScroll);
 
   /* SP drawer menu */
   var drawer = document.querySelector('.drawer');
@@ -94,7 +95,7 @@
     }
     track.addEventListener('scroll', function () { requestAnimationFrame(update); }, { passive: true });
     window.addEventListener('resize', update);
-    update();
+    requestAnimationFrame(update);
   });
 
   /* FAQ accordion */
