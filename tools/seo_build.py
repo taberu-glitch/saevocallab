@@ -39,7 +39,7 @@ SITE_URL = 'https://saevocallab.co.jp'
 SCHOOL = {
     'name': 'SaeVocalLab',
     'alternateName': ['サエ ボーカル ラボ', 'サエボーカルラボ'],
-    'description': '西武池袋線「中村橋駅」より徒歩1分のボーカル専門教室。お子様からシニアまで、マンツーマンの個人レッスン。30分の無料体験レッスン受付中。',
+    'description': '西武池袋線「中村橋駅」より徒歩1分のボーカル専門教室。子どもの習い事から大人・シニアの趣味まで、マンツーマンの個人レッスン。30分の無料体験レッスン受付中。',
     'postalCode': '176-0023',
     'addressRegion': '東京都',
     'addressLocality': '練馬区',
@@ -172,7 +172,7 @@ def school():
         'geo': {'@type': 'GeoCoordinates', 'latitude': lat, 'longitude': lng},
         'hasMap': f'https://www.google.com/maps/search/?api=1&query={lat}%2C{lng}',
         'knowsAbout': ['ボーカルレッスン', 'ボイストレーニング', '発声', 'キッズボーカル', '弾き語り',
-                       'オーディション対策', '音楽科受験対策'],
+                       'オーディション対策', '音楽科受験対策', '子どもの習い事', '大人の習い事'],
         'hasOfferCatalog': {
             '@type': 'OfferCatalog', 'name': 'レッスン一覧',
             'itemListElement': [{'@type': 'Offer', 'itemOffered': {'@id': abs_url(p) + '#course'}} for p in LESSONS],
